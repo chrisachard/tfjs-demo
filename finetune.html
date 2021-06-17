@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+
+    <div>
+      <img id="cat1" crossorigin src="http://127.0.0.1:8080/cat1.jpeg" height='50px' onclick="addExample('cat1', 0)"/>
+      <img id="cat2" crossorigin src="http://127.0.0.1:8080/cat2.jpeg" height='50px' onclick="addExample('cat2', 0)"/>
+      <img id="cat3" crossorigin src="http://127.0.0.1:8080/cat3.jpeg" height='50px' onclick="addExample('cat3', 0)"/>
+      <img id="cat4" crossorigin src="http://127.0.0.1:8080/cat4.jpeg" height='50px' onclick="addExample('cat4', 0)"/>
+    </div>
+
+    <div>
+      <img id="dog1" crossorigin src="http://127.0.0.1:8080/dog1.jpeg" height='50px' onclick="addExample('dog1', 1)"/>
+      <img id="dog2" crossorigin src="http://127.0.0.1:8080/dog2.jpeg" height='50px' onclick="addExample('dog2', 1)"/>
+      <img id="dog3" crossorigin src="http://127.0.0.1:8080/dog3.jpeg" height='50px' onclick="addExample('dog3', 1)"/>
+      <img id="dog4" crossorigin src="http://127.0.0.1:8080/dog4.jpeg" height='50px' onclick="addExample('dog4', 1)"/>
+    </div>
+    
+    <h1>Predict:</h1>
+
+    <div>
+      <img id="iscat" crossorigin src="http://127.0.0.1:8080/cat.jpeg" height="200px" onclick="catordog('iscat')"/>
+    </div>
+    <div>
+      <img id="isdog" crossorigin src="http://127.0.0.1:8080/dog.jpeg" height="200px" onclick="catordog('isdog')"/>
+    </div>
+
+    <div>
+      <img id="carrot" crossorigin src="http://127.0.0.1:8080/carrot.jpeg" height="200px" onclick="catordog('carrot')"/>
+    </div>
+
+
+    <script src="finetune.js"></script>
+  </body>
+</html>

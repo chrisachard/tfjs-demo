@@ -1,0 +1,19 @@
+
+
+
+Image classification
+
+https://www.tensorflow.org/js/models
+https://github.com/tensorflow/tfjs-models/tree/master/mobilenet
+> http-server ./
+http://127.0.0.1:8080/images.html
+
+
+Finetune demo
+
+http://127.0.0.1:8080/finetune.html
+WAIT for model to load
+click all 4 image for cat and dog
+click on bottom cat
+click on bottom dog
+
