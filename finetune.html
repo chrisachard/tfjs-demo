@@ -1,11 +1,18 @@
 <html>
   <head>
+    <style>
+      img {border: 5px solid #fff;opacity: 0.9}
+      img:hover {border:5px solid #ccc; cursor:pointer; opacity: 1.0}
+    </style>
+
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
   </head>
   <body>
+    <p>(Open the developer console to see predictions)</p>
 
+    <h1>Training:</h1>
     <div>
       <img id="cat1" crossorigin src="http://127.0.0.1:8080/cat1.jpeg" height='50px' onclick="addExample('cat1', 0)"/>
       <img id="cat2" crossorigin src="http://127.0.0.1:8080/cat2.jpeg" height='50px' onclick="addExample('cat2', 0)"/>
