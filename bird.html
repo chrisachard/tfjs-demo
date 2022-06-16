@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      img {border: 5px solid #fff;opacity: 0.9}
+      img:hover {border:5px solid #ccc; cursor:pointer; opacity: 1.0}
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    <p>(Open the developer console to see predictions)</p>
+
+    <h1>Training:</h1>
+    <div>
+      <img id="bird1" crossorigin src="http://127.0.0.1:8080/bird1.jpeg" height='75px' onclick="addExample('bird1', 0)"/>
+      <img id="bird2" crossorigin src="http://127.0.0.1:8080/bird2.jpeg" height='75px' onclick="addExample('bird2', 0)"/>
+      <img id="bird3" crossorigin src="http://127.0.0.1:8080/bird3.png" height='75px' onclick="addExample('bird3', 0)"/>
+      <img id="bird4" crossorigin src="http://127.0.0.1:8080/bird4.jpeg" height='75px' onclick="addExample('bird4', 0)"/>
+    </div>
+
+    <div>
+      <img id="notbird1" crossorigin src="http://127.0.0.1:8080/cat1.jpeg" height='75px' onclick="addExample('notbird1', 1)"/>
+      <img id="notbird2" crossorigin src="http://127.0.0.1:8080/cat2.jpeg" height='75px' onclick="addExample('notbird2', 1)"/>
+      <img id="notbird3" crossorigin src="http://127.0.0.1:8080/dog3.jpeg" height='75px' onclick="addExample('notbird3', 1)"/>
+      <img id="notbird4" crossorigin src="http://127.0.0.1:8080/carrot.jpeg" height='75px' onclick="addExample('notbird4', 1)"/>
+    </div>
+    
+    <h1>Predict:</h1>
+
+    <div>
+      <img id="test1" crossorigin src="http://127.0.0.1:8080/cat.jpeg" height="200px" onclick="birdornot('test1')"/>
+    </div>
+    <div>
+      <img id="test2" crossorigin src="http://127.0.0.1:8080/dog.jpeg" height="200px" onclick="birdornot('test2')"/>
+    </div>
+
+    <div>
+      <img id="test3" crossorigin src="http://127.0.0.1:8080/bird5.jpeg" height="200px" onclick="birdornot('test3')"/>
+    </div>
+
+
+    <script src="finetune.js"></script>
+  </body>
+</html>
